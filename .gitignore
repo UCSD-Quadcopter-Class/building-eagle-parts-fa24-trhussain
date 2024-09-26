@@ -1,0 +1,12 @@
+.*.lck
+*.pro
+*~
+~$*
+*.l#?
+*.s#?
+*.b#?
+.DS_Store
+\#*
+.test.out
+.\#*
+starter
