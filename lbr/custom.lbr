@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -237,9 +237,8 @@
 <pin name="D" x="3.175" y="5.08" visible="pad" length="point" rot="R270"/>
 <pin name="G" x="-5.08" y="0" visible="pad" length="point" rot="R180"/>
 <pin name="S" x="3.175" y="-5.08" visible="pad" length="point" rot="R180"/>
-<text x="5.75" y="-3.12" size="1.778" layer="95">&gt;NAME
-</text>
 <text x="3.21" y="1.25" size="1.778" layer="96">&gt;Value</text>
+<text x="-7.62" y="2.54" size="1.778" layer="95">Name</text>
 </symbol>
 <symbol name="IMU">
 <text x="-2.54" y="-22.86" size="1.778" layer="95">&gt;NAME</text>
@@ -254,7 +253,6 @@
 <pin name="4_INT1" x="-20.32" y="0" visible="pin" length="middle"/>
 <pin name="5_VDDIO" x="-20.32" y="-5.08" visible="pin" length="middle"/>
 <pin name="6_GND" x="-20.32" y="-10.16" visible="pin" length="middle"/>
-<pin name="7_GND" x="-20.32" y="-15.24" visible="pin" length="middle"/>
 <pin name="8_VDD" x="20.32" y="-15.24" visible="pin" length="middle" rot="R180"/>
 <pin name="9_INT2" x="20.32" y="-10.16" visible="pin" length="middle" rot="R180"/>
 <pin name="10_OCS_AUX" x="20.32" y="-5.08" visible="pin" length="middle" rot="R180"/>
@@ -305,7 +303,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="MOSFET" prefix="Q" uservalue="yes">
+<deviceset name="MOSFET" prefix="Q">
 <gates>
 <gate name="G$1" symbol="NMOSFET" x="0" y="0"/>
 </gates>
@@ -326,7 +324,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="IMU_LSM6SDSO" prefix="U" uservalue="yes">
+<deviceset name="IMU_LSM6DSO" prefix="U">
 <gates>
 <gate name="G$1" symbol="IMU" x="0" y="0"/>
 </gates>
@@ -343,8 +341,7 @@
 <connect gate="G$1" pin="3_SCX" pad="3"/>
 <connect gate="G$1" pin="4_INT1" pad="4"/>
 <connect gate="G$1" pin="5_VDDIO" pad="5"/>
-<connect gate="G$1" pin="6_GND" pad="6"/>
-<connect gate="G$1" pin="7_GND" pad="7"/>
+<connect gate="G$1" pin="6_GND" pad="6 7"/>
 <connect gate="G$1" pin="8_VDD" pad="8"/>
 <connect gate="G$1" pin="9_INT2" pad="9"/>
 </connects>
@@ -362,10 +359,6 @@
 </library>
 </drawing>
 <compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
