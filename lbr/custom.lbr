@@ -138,7 +138,7 @@
 <wire x1="2.5" y1="-2" x2="2.5" y2="2.5" width="0.127" layer="39"/>
 <wire x1="-2.5" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="39"/>
 </package>
-<package name="IMU_LGA-14L">
+<package name="IMU_LGA-14L_LSM6DS0">
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.1" layer="21"/>
 <wire x1="1.5" y1="1.25" x2="1.5" y2="-1.25" width="0.1" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="-1.5" y2="-1.25" width="0.1" layer="21"/>
@@ -240,26 +240,26 @@
 <text x="3.21" y="1.25" size="1.778" layer="96">&gt;Value</text>
 <text x="-7.62" y="2.54" size="1.778" layer="95">Name</text>
 </symbol>
-<symbol name="IMU">
+<symbol name="LSM6DS0-IMU">
 <text x="-2.54" y="-22.86" size="1.778" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-27.94" size="1.778" layer="96">&gt;VALUE</text>
 <wire x1="-15.24" y1="17.78" x2="-15.24" y2="-17.78" width="0.1524" layer="94"/>
 <wire x1="-15.24" y1="-17.78" x2="15.24" y2="-17.78" width="0.1524" layer="94"/>
 <wire x1="15.24" y1="-17.78" x2="15.24" y2="17.78" width="0.1524" layer="94"/>
 <wire x1="15.24" y1="17.78" x2="-15.24" y2="17.78" width="0.1524" layer="94"/>
-<pin name="1_SDO/SAO" x="-20.32" y="15.24" visible="pin" length="middle"/>
-<pin name="2_SDX" x="-20.32" y="10.16" visible="pin" length="middle"/>
-<pin name="3_SCX" x="-20.32" y="5.08" length="middle"/>
-<pin name="4_INT1" x="-20.32" y="0" visible="pin" length="middle"/>
-<pin name="5_VDDIO" x="-20.32" y="-5.08" visible="pin" length="middle"/>
-<pin name="6_GND" x="-20.32" y="-10.16" visible="pin" length="middle"/>
-<pin name="8_VDD" x="20.32" y="-15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="9_INT2" x="20.32" y="-10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="10_OCS_AUX" x="20.32" y="-5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="11_SDO_AUX" x="20.32" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="12_CS" x="20.32" y="5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="13_SCL" x="20.32" y="10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="14_SDA" x="20.32" y="15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="SDO/SAO" x="-20.32" y="15.24" visible="pin" length="middle"/>
+<pin name="SDX" x="-20.32" y="10.16" visible="pin" length="middle"/>
+<pin name="SCX" x="-20.32" y="5.08" length="middle"/>
+<pin name="INT1" x="-20.32" y="0" visible="pin" length="middle"/>
+<pin name="VDDIO" x="-20.32" y="-5.08" visible="pin" length="middle"/>
+<pin name="GND" x="-20.32" y="-10.16" visible="pin" length="middle"/>
+<pin name="VDD" x="20.32" y="-15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="INT2" x="20.32" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="OCS_AUX" x="20.32" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="SDO_AUX" x="20.32" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="CS" x="20.32" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="SCL" x="20.32" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="SDA" x="20.32" y="15.24" visible="pin" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -326,24 +326,24 @@
 </deviceset>
 <deviceset name="IMU_LSM6DSO" prefix="U">
 <gates>
-<gate name="G$1" symbol="IMU" x="0" y="0"/>
+<gate name="G$1" symbol="LSM6DS0-IMU" x="0" y="0"/>
 </gates>
 <devices>
-<device name="LSM6SDSO" package="IMU_LGA-14L">
+<device name="LSM6SDSO" package="IMU_LGA-14L_LSM6DS0">
 <connects>
-<connect gate="G$1" pin="10_OCS_AUX" pad="10"/>
-<connect gate="G$1" pin="11_SDO_AUX" pad="11"/>
-<connect gate="G$1" pin="12_CS" pad="12"/>
-<connect gate="G$1" pin="13_SCL" pad="13"/>
-<connect gate="G$1" pin="14_SDA" pad="14"/>
-<connect gate="G$1" pin="1_SDO/SAO" pad="1"/>
-<connect gate="G$1" pin="2_SDX" pad="2"/>
-<connect gate="G$1" pin="3_SCX" pad="3"/>
-<connect gate="G$1" pin="4_INT1" pad="4"/>
-<connect gate="G$1" pin="5_VDDIO" pad="5"/>
-<connect gate="G$1" pin="6_GND" pad="6 7"/>
-<connect gate="G$1" pin="8_VDD" pad="8"/>
-<connect gate="G$1" pin="9_INT2" pad="9"/>
+<connect gate="G$1" pin="CS" pad="12"/>
+<connect gate="G$1" pin="GND" pad="6 7"/>
+<connect gate="G$1" pin="INT1" pad="4"/>
+<connect gate="G$1" pin="INT2" pad="9"/>
+<connect gate="G$1" pin="OCS_AUX" pad="10"/>
+<connect gate="G$1" pin="SCL" pad="13"/>
+<connect gate="G$1" pin="SCX" pad="3"/>
+<connect gate="G$1" pin="SDA" pad="14"/>
+<connect gate="G$1" pin="SDO/SAO" pad="1"/>
+<connect gate="G$1" pin="SDO_AUX" pad="11"/>
+<connect gate="G$1" pin="SDX" pad="2"/>
+<connect gate="G$1" pin="VDD" pad="8"/>
+<connect gate="G$1" pin="VDDIO" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
