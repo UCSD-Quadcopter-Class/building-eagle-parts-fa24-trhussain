@@ -132,10 +132,10 @@
 <wire x1="0.7" y1="1.52" x2="0.7" y2="-1.52" width="0.12" layer="51"/>
 <wire x1="0.7" y1="-1.52" x2="-0.7" y2="-1.52" width="0.12" layer="51"/>
 <text x="0" y="2.639" size="0.9" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
-<wire x1="-2.5" y1="2.4" x2="-2.5" y2="-2" width="0.127" layer="39"/>
-<wire x1="-2.5" y1="-2" x2="2.5" y2="-2" width="0.127" layer="39"/>
-<wire x1="2.5" y1="-2" x2="2.5" y2="2.4" width="0.127" layer="39"/>
-<wire x1="-2.5" y1="2.4" x2="2.5" y2="2.4" width="0.127" layer="39"/>
+<wire x1="-2.4" y1="2.4" x2="2.4" y2="2.4" width="0.127" layer="39"/>
+<wire x1="2.4" y1="2.4" x2="2.4" y2="-1.9" width="0.127" layer="39"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.127" layer="39"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="2.4" width="0.127" layer="39"/>
 </package>
 <package name="IMU_LGA-14L_LSM6DS0">
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.1" layer="21"/>
