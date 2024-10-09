@@ -132,10 +132,10 @@
 <wire x1="0.7" y1="1.52" x2="0.7" y2="-1.52" width="0.12" layer="51"/>
 <wire x1="0.7" y1="-1.52" x2="-0.7" y2="-1.52" width="0.12" layer="51"/>
 <text x="0" y="2.639" size="0.9" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
-<wire x1="-1.9" y1="2" x2="2.4" y2="2" width="0.127" layer="39"/>
-<wire x1="2.4" y1="2" x2="2.4" y2="-2" width="0.127" layer="39"/>
-<wire x1="2.4" y1="-2" x2="-1.9" y2="-2" width="0.127" layer="39"/>
-<wire x1="-1.9" y1="-2" x2="-1.9" y2="2" width="0.127" layer="39"/>
+<wire x1="-1.9" y1="1.9" x2="2.4" y2="1.9" width="0.127" layer="39"/>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.9" width="0.127" layer="39"/>
+<wire x1="2.4" y1="-1.9" x2="-1.9" y2="-1.9" width="0.127" layer="39"/>
+<wire x1="-1.9" y1="-1.9" x2="-1.9" y2="1.9" width="0.127" layer="39"/>
 <polygon width="0.1524" layer="29" pour="solid">
 <vertex x="-1.1238" y="0.7262"/>
 <vertex x="-0.4762" y="0.7262"/>
